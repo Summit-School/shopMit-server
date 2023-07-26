@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-class Products (models.Model):
+class Product (models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     price = models.DecimalField(max_digits=7,decimal_places=3)
@@ -10,7 +10,7 @@ class Products (models.Model):
     def __str__(self):
         return self.name
 
-class CustomerUser(AbstractUser):
+class CustomUser(AbstractUser):
     user_name = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=20)
