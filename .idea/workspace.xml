@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f46e0ae5-d11e-46b1-b649-c514e0a2e644" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Modules.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/View.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/setting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bash" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommence/Models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommence/Views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommence/_ _init_ _.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommence/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Modules.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/View.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommence/setting.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +45,21 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Alkaloid/anaconda3"
+    "last_opened_file_path": "C:/Users/Alkaloid/Documents/GitHub/shopMit-server/ecommence"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\ecommence" />
+      <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\ecommenceproject" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\ecommence" />
+      <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server" />
+      <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\ecommenceproject" />
+      <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\Models" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="shopMit-server" />
@@ -58,7 +73,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Server/manager.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\manager.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />

@@ -10,3 +10,14 @@ DATABASES = {
         'PORT': '8080',  # Default MySQL port is usually 3306.
     }
 }
+NSTALLED_APPS = [
+    # Other apps
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    # Other apps
+]
+
+# Authentication settings
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
