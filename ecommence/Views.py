@@ -10,6 +10,8 @@ import random
 import string
 
 # Function to view a specific product
+# ecommerce/views.py
+
 def view_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     data = {
