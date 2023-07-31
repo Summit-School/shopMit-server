@@ -64,7 +64,7 @@ DATABASES = {
 # Authentication settings
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
 
- 
+
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
