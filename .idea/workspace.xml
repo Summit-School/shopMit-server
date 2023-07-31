@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f46e0ae5-d11e-46b1-b649-c514e0a2e644" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ecommence/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecommence/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopMit_server/_ _init_ _.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopMit_server/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopMit_server/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopMit_server/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shopMit-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shopMit-server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conda.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommence/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/shopMit_server/setting.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,20 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alkaloid/Documents/GitHub/shopMit-server/ecommence&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Alkaloid/Documents/GitHub/shopMit-server/shopMit_server"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\shopMit_server" />
       <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\ecommence" />
       <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\ecommenceproject" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\shopMit_server" />
       <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\ecommence" />
       <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server" />
       <recent name="C:\Users\Alkaloid\Documents\GitHub\shopMit-server\ecommenceproject" />
