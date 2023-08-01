@@ -1,16 +1,20 @@
-# ecommerce/Views.py
+from django.shortcuts import render
+
+# Create your views here.
+from django.http import HttpResponse
 from django.contrib.auth import authenticate
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
-from ecommence.Models import Product, CustomUser
+from .Models import Product, CustomUser
 from django.core.mail import send_mail
 from django.conf import settings
 import random
 import string
 
-# Function to view a specific product
-# ecommerce/views.py
+
+def index(request):
+    return HttpResponse("<h1> Server Runing.....")
 
 def view_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)

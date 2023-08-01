@@ -1,2 +1,2 @@
 django~=4.2.3
-gunicorn~=19.8.1
+gunicorn==19.8.1
