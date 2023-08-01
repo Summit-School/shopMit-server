@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
-from ecommence.ecommence.Models import Product
+from .model import Product
 
 
 # Create your views here.
@@ -60,22 +60,3 @@ def view_all_products(request):
     return JsonResponse(data, safe=False)
 
 # Function to read and update user data
-@login_required
-def user_data(request):
-    user = request.user
-    data = {
-        'username': user.username,
-        'email': user.email,
-        'phone_number': user.phone_number,
-        'user_validation': user.user_validation,
-    }
-    if request.method == 'POST':
-        # Update user data based on POST data
-        email = request.POST.get('email')
-        phone_number = request.POST.get('phone_number')
-        user.email = email
-        user.phone_number = phone_number
-        user.save()
-        return JsonResponse({'message': 'User data updated successfully.'})
-    else:
-        return JsonResponse(data)

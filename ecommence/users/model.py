@@ -1,18 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-class Product (models.Model):
-    name = models.CharField(max_length=255)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=7,decimal_places=3)
-    quantity = models.PositiveIntegerField()
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        app_label = 'products'
-
 
 class CustomUser(AbstractUser):
     user_name = models.CharField(max_length=255)
@@ -24,6 +12,8 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.user_name
 
+    groups = models.ManyToManyField('auth.Group', related_name='custom_users', blank=True)
+    user_permissions = models.ManyToManyField('auth.Permission', related_name='custom_users', blank=True)
+
     class Meta:
         app_label = 'users'
-
