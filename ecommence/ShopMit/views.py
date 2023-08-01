@@ -16,6 +16,8 @@ import string
 def index(request):
     return HttpResponse("<h1> Server Runing.....")
 
+
+
 def view_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     data = {
