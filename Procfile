@@ -1,1 +1,0 @@
-web: gunicorn ecommence.ShopMit.wsgi --log-file -

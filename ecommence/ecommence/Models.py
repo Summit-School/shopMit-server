@@ -11,7 +11,8 @@ class Product (models.Model):
         return self.name
 
     class Meta:
-        app_label = 'ShopMit'
+        app_label = 'products'
+
 
 class CustomUser(AbstractUser):
     user_name = models.CharField(max_length=255)
@@ -24,4 +25,5 @@ class CustomUser(AbstractUser):
         return self.user_name
 
     class Meta:
-        app_label = 'ShopMit'
+        app_label = 'users'
+
