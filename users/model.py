@@ -6,6 +6,7 @@ class CustomUser(AbstractUser):
     user_name = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=20)
+    password = models.CharField()
     validation = models.BooleanField(default=False)
     user_validation_code = models.CharField(max_length=6, blank=True, null=True)
 

@@ -1,9 +1,12 @@
 from django.urls import path
-from . import views
+from .views import *
+
+app_name = 'your_app_name'  # Replace with your app name
+
 urlpatterns = [
-    path('products/<int:product_id>/', views.view_product, name='view_product'),
-    path('products/create/', views.create_product, name='create_product'),
-    path('products/<int:product_id>/update/', views.update_product, name='update_product'),
-    path('products/<int:product_id>/delete/', views.delete_product, name='delete_product'),
-    path('products/all/', views.view_all_products, name='view_all_products'),
-    ]
+    path('view-product/<int:product_id>/', ViewProduct.as_view(), name='view-product'),
+    path('create-product/', CreateProduct.as_view(), name='create-product'),
+    path('update-product/<int:product_id>/', UpdateProduct.as_view(), name='update-product'),
+    path('delete-product/<int:product_id>/', DeleteProduct.as_view(), name='delete-product'),
+    path('view-all-products/', ViewAllProducts.as_view(), name='view-all-products'),
+]

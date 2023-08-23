@@ -1,62 +1,70 @@
-from django.shortcuts import get_object_or_404, render
-from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 from .model import Product
+from .serializers import ProductSerializer
+from drf_spectacular.utils import extend_schema
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 
-# Create your views here.
-def view_product(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    data = {
-        'name': product.name,
-        'description': product.description,
-        'price': str(product.price),
-        'quantity': product.quantity,
-    }
-    return JsonResponse(data)
+class ViewProduct(APIView):
+    serializer_class = ProductSerializer
 
-# Function to create a new product
-@login_required
-def create_product(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        description = request.POST.get('description')
-        price = request.POST.get('price')
-        quantity = request.POST.get('quantity')
-        product = Product.objects.create(name=name, description=description, price=price, quantity=quantity)
-        return JsonResponse({'message': 'Product created successfully.'})
-    else:
-        return JsonResponse({'error': 'POST request required.'}, status=400)
+    @extend_schema(description="View to download course content.", responses={200: ProductSerializer})
+    def get(self, request, product_id):
+        product = get_object_or_404(Product, pk=product_id)
+        serializer = ProductSerializer(product)
+        return Response(serializer.data)
 
-# Function to update a product
-@login_required
-def update_product(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        description = request.POST.get('description')
-        price = request.POST.get('price')
-        quantity = request.POST.get('quantity')
-        product.name = name
-        product.description = description
-        product.price = price
-        product.quantity = quantity
-        product.save()
-        return JsonResponse({'message': 'Product updated successfully.'})
-    else:
-        return JsonResponse({'error': 'POST request required.'}, status=400)
 
-# Function to delete a product
-@login_required
-def delete_product(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    return JsonResponse({'message': 'Product deleted successfully.'})
+class CreateProduct(APIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = ProductSerializer
 
-# Function to view all products
-def view_all_products(request):
-    products = Product.objects.all()
-    data = [{'name': product.name, 'description': product.description, 'price': str(product.price), 'quantity': product.quantity} for product in products]
-    return JsonResponse(data, safe=False)
+    @method_decorator(login_required)
+    @extend_schema(description="View to download course content.", responses={200: ProductSerializer})
+    def post(self, request):
+        serializer = ProductSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'message': 'Product created successfully.'}, status=201)
+        return Response(serializer.errors, status=400)
 
-# Function to read and update user data
+
+class UpdateProduct(APIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = ProductSerializer
+
+    @method_decorator(login_required)
+    @extend_schema(description="View to download course content.", responses={200: ProductSerializer})
+    def post(self, request, product_id):
+        product \
+            = get_object_or_404(Product, pk=product_id)
+        serializer = ProductSerializer(product, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'message': 'Product updated successfully.'})
+        return Response(serializer.errors, status=400)
+
+
+class DeleteProduct(APIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = ProductSerializer
+
+    @method_decorator(login_required)
+    def post(self, request, product_id):
+        product = get_object_or_404(Product, pk=product_id)
+        product.delete()
+        return Response({'message': 'Product deleted successfully.'})
+
+
+class ViewAllProducts(APIView):
+    serializer_class = ProductSerializer
+
+    @extend_schema(description="View to download course content.", responses={200: ProductSerializer})
+    def get(self, request):
+        products = Product.objects.all()
+        serializer = ProductSerializer(products, many=True)
+        return Response(serializer.data)
